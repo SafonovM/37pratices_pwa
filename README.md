@@ -74,11 +74,16 @@ shortTitle: Короткий заголовок
 
 ## GitHub Pages
 
-1. Settings → Pages → **Source: GitHub Actions**
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**  
+   (без этого URL покажет *«There isn't a GitHub Pages site here»* — это не отсутствие `index.html`)
 2. Push в `main` / `master` — workflow соберёт и задеплоит `/out`
-3. Сайт: `https://<user>.github.io/<repo>/`
+3. Дождитесь зелёного run в **Actions**, затем откройте:  
+   `https://<user>.github.io/<repo>/`  
+   (для этого репо: `https://SafonovM.github.io/37pratices_pwa/`)
 
 `NEXT_PUBLIC_BASE_PATH` в CI выставляется как `/<имя-репозитория>`.
+
+Корневой `index.html` — статический редирект на `/ru/` (meta refresh + ссылка), без зависимости от JS Next.
 
 ### Кастомный домен (корень)
 
