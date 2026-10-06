@@ -1,0 +1,50 @@
+{
+  "Meta": {
+    "siteName": "37 Practices of a Bodhisattva",
+    "siteDescription": "An online reader for Ngulchu Thogme Zangpo's classic — The 37 Practices of a Bodhisattva."
+  },
+  "Nav": {
+    "home": "Home",
+    "toc": "Contents",
+    "about": "About",
+    "startReading": "Start reading",
+    "back": "Back",
+    "next": "Next",
+    "settings": "Settings"
+  },
+  "Home": {
+    "title": "37 Practices of a Bodhisattva",
+    "subtitle": "A classic guide on the bodhisattva path",
+    "cta": "Start reading"
+  },
+  "Toc": {
+    "title": "Contents",
+    "subtitle": "All 37 practices",
+    "practice": "Practice {number}"
+  },
+  "Practice": {
+    "of": "Practice {current} of {total}",
+    "comingSoon": "This practice text is coming soon.",
+    "prev": "Previous",
+    "next": "Next",
+    "toc": "Contents"
+  },
+  "Settings": {
+    "title": "Reading settings",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "fontSize": "Font size",
+    "fontS": "S",
+    "fontM": "M",
+    "fontL": "L"
+  },
+  "About": {
+    "title": "About",
+    "body": "A static PWA for reading The 37 Practices of a Bodhisattva. Works offline after the first visit. No server, no accounts — just the text."
+  },
+  "Footer": {
+    "offline": "Works offline"
+  }
+}

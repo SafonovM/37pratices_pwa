@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f3eb;
+  --foreground: #2c2a26;
+  --muted: #ebe4d8;
+  --muted-foreground: #6b6560;
+  --accent: #8b6914;
+  --accent-foreground: #fffdf8;
+  --border: #ddd4c4;
+  --ring: #8b6914;
+  --card: #fffdf8;
+}
+
+.dark {
+  --background: #1a1f2e;
+  --foreground: #e8e4dc;
+  --muted: #252b3d;
+  --muted-foreground: #a39e94;
+  --accent: #c4a35a;
+  --accent-foreground: #1a1f2e;
+  --border: #343b52;
+  --ring: #c4a35a;
+  --card: #222838;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 50% -20%,
+      color-mix(in srgb, var(--accent) 8%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--muted) 35%, transparent),
+      transparent 28%
+    );
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Reading font-size driven by data attribute */
+html[data-font-size="s"] .reader-prose {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+html[data-font-size="m"] .reader-prose,
+html:not([data-font-size]) .reader-prose {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+html[data-font-size="l"] .reader-prose {
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  html[data-font-size="s"] .reader-prose {
+    font-size: 1.125rem;
+  }
+  html[data-font-size="m"] .reader-prose,
+  html:not([data-font-size]) .reader-prose {
+    font-size: 1.25rem;
+  }
+  html[data-font-size="l"] .reader-prose {
+    font-size: 1.5rem;
+  }
+}
